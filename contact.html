@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/ico.ico" type="image/icon type" />
+    <script
+      src="https://kit.fontawesome.com/128a971aed.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- just for tow icons → Email $ Skype -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style.production.css" />
+    <style>
+      #contact__nav-style {
+        text-decoration: underline;
+      }
+    </style>
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <!--- Tow div parts for flex justify-content to space-around -->
+          <img
+            class="moon__logo"
+            src="./img/moon.png"
+            alt="Logo; Moon in the Night"
+          />
+        </div>
+        <div>
+          <ul role="menubar">
+            <li role="presentation">
+              <a href="index.html" role="menuitem">Home</a>
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem">About me</a>
+            </li>
+            <li role="presentation">
+              <a href="contact.html" role="menuitem" id="contact__nav-style"
+                >Contact</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem">Work</a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn__toggle-div">
+          <button
+            type="button"
+            class="btn__toggle-light"
+            id="btn__toggle-light"
+            onclick="Lightening()"
+          >
+            Click me!
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+<div class="socialmedia__contact">
+  <a href="mailto:abcdef@ghi.com" alt="Email">
+    <i class="fa-solid fa-envelope"></i><span> Email</span>
+  </a>
+  <a href="skype:username123?call" alt="Skype">
+    <i class="fa-brands fa-skype"></i><span> Skype</span>
+  </a>
+</div>
+        <div>
+          <form action="" class="contact__form">
+            <label for="f__name">First Name*</label>
+            <input
+              required
+              type="text"
+              id="f__name"
+              name="firstname"
+              placeholder="First Name"
+            />
+            <label for="l__name">Last Name*</label>
+            <input
+              required
+              type="text"
+              id="l__name"
+              name="lastname"
+              placeholder="Last Name"
+            />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <br />
+      
+    </main>
+    <footer>
+      <a href="tel:123-456-7890"
+        ><img src="./img/call.svg" alt="Direct-Call" id="direct__call-svg" /></a
+      ><span class="direct__call">Direct Call</span><br />
+    </footer>
+
+    <script>
+      function Lightening() {
+        const element = document.body;
+        element.classList.toggle("light__mode");
+      }
+    </script>
+
+    <script src="./js/tota11y.min.js"></script>
+  </body>
+</html>
