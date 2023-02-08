@@ -116,12 +116,10 @@ main {
 }
 .container {
   position: relative;
-  top: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
   min-height: 250px;
   min-width: 450px;
   border-radius: 25px;
