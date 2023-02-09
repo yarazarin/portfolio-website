@@ -1,8 +1,8 @@
-/* css root selectors ---------------------------------*/
+/* css root selectors */
 
 :root {
-  --white_c: #ffffff;
-  --black_c: #000000;
+  --white_c: #fff;
+  --black_c: #000;
   --lighten_background: #04270f;
   --golden_c: #daa520;
   --visited_c: #777;
@@ -10,9 +10,7 @@
   --border_c: #7a7a7a;
 }
 
-/* end of root selectors --------------------------------*/
-
-
+/* end of root selectors */
 
 /* some reset css browser codes , These codes may be duplicated in: "./normalize.css" */
 * {
@@ -20,11 +18,13 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   padding: 0;
   margin: 0;
   border: 0;
 }
+
 ul,
 li {
   list-style-type: none;
@@ -35,15 +35,14 @@ a {
   color: var(--white_c);
 }
 
-/* end of reset browser codes ------------------------*/
-
+/* end of reset browser codes */
 
 body {
   font-family: "Itim", cursive;
   font-size: 18px;
   font-weight: 700;
   position: relative;
-  background: #000000;
+  background: #000;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -66,6 +65,7 @@ nav {
   height: 150px;
   z-index: 999;
 }
+
 .moon__logo {
   width: 60px;
   height: 60px;
@@ -80,14 +80,16 @@ nav ul {
   text-align: center;
   min-width: 345px;
 }
+
 nav ul li {
   transition: 800ms;
 }
+
 nav ul li:hover,
 nav ul li:focus {
   transform: rotateX(360deg);
   border-radius: 50px;
-  box-shadow: #ffffff 0px 0px 30px;
+  box-shadow: #fff 0 0 30px;
 }
 
 nav ul li:active {
@@ -100,6 +102,7 @@ nav a {
   color: var(--white_c);
   padding: 15px;
 }
+
 nav a:visited {
   color: var(--visited_c);
 }
@@ -114,6 +117,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .container {
   position: relative;
   display: flex;
@@ -124,19 +128,21 @@ main {
   min-width: 450px;
   border-radius: 25px;
   background-color: var(--container_c);
-  box-shadow: var(--white_c) 0px 0px 30px;
+  box-shadow: var(--white_c) 0 0 30px;
 }
 
 #personal__Image {
   width: 150px;
   border-radius: 50%;
 }
+
 .container a {
   font-size: 3rem;
   cursor: pointer;
   color: var(--white_c);
   text-decoration: none;
 }
+
 .container a span {
   display: flex;
   position: inherit;
@@ -162,6 +168,7 @@ main {
   flex-direction: column;
   padding: 10px;
 }
+
 .socialmedia__contact {
   display: flex;
   width: 100%;
@@ -200,6 +207,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 footer i {
   position: relative;
   left: -20px;
@@ -217,12 +225,13 @@ footer i {
 .about__main h1 {
   color: var(--white_c);
 }
+
 .about__table {
   padding: 10px;
   width: 100%;
   border-collapse: separate;
-  width: 100%;
 }
+
 .about__table th,
 .about__table td {
   color: var(--white_c);
@@ -236,7 +245,7 @@ footer i {
 }
 
 .direct__call {
-  text-shadow: 0px 5px 10px #000000;
+  text-shadow: 0 5px 10 #000;
   color: var(--golden_c);
   font-size: 0.8rem;
   position: relative;
@@ -246,10 +255,11 @@ footer i {
 .grid__gallery--container {
   position: relative;
   width: 70%;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   max-height: 30%;
   overflow: none;
 }
+
 .grid__gallery {
   position: absolute;
   display: grid;
@@ -260,6 +270,7 @@ footer i {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1.5em;
 }
+
 .grid__gallery img {
   filter: grayscale(100%);
   display: block;
@@ -267,6 +278,7 @@ footer i {
   margin: auto;
   transition: 0.9s;
 }
+
 .grid__gallery img:hover {
   filter: grayscale(0);
   transform: scale(150%);
@@ -279,73 +291,82 @@ footer i {
   justify-content: center;
   z-index: 999;
 }
+
 .toronto__svg {
   top: 100px;
 }
+
 .sun {
   animation: 5s sun_toronto infinite alternate-reverse;
 }
 
-
-/* animation for sun in the toronto's picture -----------------*/
+/* animation for sun in the toronto's picture */
 
 @keyframes sun_toronto {
   from {
     transform: translate(-150px, 10px);
   }
+
   to {
-    transform: translate(0px, 60px);
+    transform: translate(0, 60px);
   }
 }
 
-/* end animation codes -----------------------------------------*/
+/* end animation codes */
 
-
-/* responsive codes----------------------------------------------*/
+/* responsive codes */
 
 @media screen and (width: 1700px) {
   .grid__gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 1700px) {
   .grid__gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 1020px) {
   .grid__gallery {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 760px) {
   .random__picsum {
     width: 150px;
     height: 150px;
   }
 }
+
 @media screen and (max-width: 760px) {
   .grid__gallery {
     top: 50px;
     grid-template-columns: 1fr;
   }
+
   nav {
     flex-direction: column;
     justify-content: flex-start;
     z-index: 999;
   }
+
   nav ul {
     line-height: 200%;
     flex-direction: column;
     padding-bottom: 90px;
   }
+
   .moon__logo {
     display: none;
   }
+
   .btn__toggle-div {
     position: relative;
     bottom: 80px;
   }
 }
 
-/* end the responsive codes-------------------------------------- /*
+/* end the responsive codes */

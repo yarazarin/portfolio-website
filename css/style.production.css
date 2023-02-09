@@ -4,6 +4,22 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
+/* css root selectors */
+
+:root {
+  --white_c: #fff;
+  --black_c: #000;
+  --lighten_background: #04270f;
+  --golden_c: #daa520;
+  --visited_c: #777;
+  --container_c: #0a1107;
+  --border_c: #7a7a7a;
+}
+
+/* end of root selectors */
+
+/* some reset css browser codes , These codes may be duplicated in: "./normalize.css" */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -24,15 +40,17 @@ li {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white_c);
 }
+
+/* end of reset browser codes */
 
 body {
   font-family: "Itim", cursive;
   font-size: 18px;
   font-weight: 700;
   position: relative;
-  background: #000000;
+  background: #000;
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -51,7 +69,7 @@ body {
 }
 
 .light__mode {
-  background-color: #04270f;
+  background-color: var(--lighten_background);
 }
 
 nav {
@@ -107,23 +125,23 @@ nav ul li:focus {
   -webkit-transform: rotateX(360deg);
   transform: rotateX(360deg);
   border-radius: 50px;
-  -webkit-box-shadow: #ffffff 0px 0px 30px;
-  box-shadow: #ffffff 0px 0px 30px;
+  -webkit-box-shadow: #fff 0 0 30px;
+  box-shadow: #fff 0 0 30px;
 }
 
 nav ul li:active {
-  background-color: #daa520;
+  background-color: var(--golden_c);
 }
 
 nav a {
   font-size: 0.9rem;
   font-weight: 650;
-  color: #ffffff;
+  color: var(--white_c);
   padding: 15px;
 }
 
 nav a:visited {
-  color: #777;
+  color: var(--visited_c);
 }
 
 main {
@@ -148,7 +166,6 @@ main {
 
 .container {
   position: relative;
-  top: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,13 +179,13 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 25px;
+  top: 40vh;
   min-height: 250px;
   min-width: 450px;
   border-radius: 25px;
-  background-color: #0a1107;
-  -webkit-box-shadow: #ffffff 0px 0px 30px;
-  box-shadow: #ffffff 0px 0px 30px;
+  background-color: var(--container_c);
+  -webkit-box-shadow: var(--white_c) 0 0 30px;
+  box-shadow: var(--white_c) 0 0 30px;
 }
 
 #personal__Image {
@@ -179,7 +196,7 @@ main {
 .container a {
   font-size: 3rem;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--white_c);
   text-decoration: none;
 }
 
@@ -220,7 +237,7 @@ main {
 .contact__form {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 150%;
-  color: #ffffff;
+  color: var(--white_c);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,7 +266,7 @@ main {
   border: none;
   padding: 1px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--white_c);
   cursor: pointer;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -260,13 +277,13 @@ main {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  background-color: #000000;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: var(--black_c);
+  color: var(--white_c);
+  border: 1px solid var(--white_c);
 }
 
 footer {
-  color: #ffffff;
+  color: var(--white_c);
   gap: 10px;
   width: 100%;
   height: 100px;
@@ -292,7 +309,7 @@ footer i {
   left: -20px;
   margin-left: 5px;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--white_c);
 }
 
 .contact__footer--icons {
@@ -302,25 +319,18 @@ footer i {
 }
 
 .about__main h1 {
-  color: #ffffff;
+  color: var(--white_c);
 }
 
 .about__table {
   padding: 10px;
   width: 100%;
   border-collapse: separate;
-  width: 100%;
 }
 
-.about__table th {
-  color: #ffffff;
-  text-align: center;
-  padding: 7px;
-  border: solid #7a7a7a 0.5px;
-}
-
+.about__table th,
 .about__table td {
-  color: #ffffff;
+  color: var(--white_c);
   text-align: center;
   padding: 7px;
   border: solid #7a7a7a 0.5px;
@@ -333,8 +343,8 @@ footer i {
 }
 
 .direct__call {
-  text-shadow: 0px 5px 10px #000000;
-  color: #daa520;
+  text-shadow: 0 5px 10 #000;
+  color: var(--golden_c);
   font-size: 0.8rem;
   position: relative;
   bottom: 14px;
@@ -343,7 +353,7 @@ footer i {
 .grid__gallery--container {
   position: relative;
   width: 70%;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   max-height: 30%;
   overflow: none;
 }
@@ -355,7 +365,7 @@ footer i {
   width: 100%;
   grid-auto-flow: row dense;
   padding: 30px;
-  background-color: #0a1107;
+  background-color: var(--container_c);
   -ms-grid-columns: 1fr 1.5em 1fr 1.5em 1fr 1.5em 1fr 1.5em 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1.5em;
@@ -400,50 +410,64 @@ footer i {
   animation: 5s sun_toronto infinite alternate-reverse;
 }
 
+/* animation for sun in the toronto's picture */
+
 @-webkit-keyframes sun_toronto {
   from {
     -webkit-transform: translate(-150px, 10px);
     transform: translate(-150px, 10px);
   }
+
   to {
-    -webkit-transform: translate(0px, 60px);
-    transform: translate(0px, 60px);
+    -webkit-transform: translate(0, 60px);
+    transform: translate(0, 60px);
   }
 }
+
 @keyframes sun_toronto {
   from {
     -webkit-transform: translate(-150px, 10px);
     transform: translate(-150px, 10px);
   }
+
   to {
-    -webkit-transform: translate(0px, 60px);
-    transform: translate(0px, 60px);
+    -webkit-transform: translate(0, 60px);
+    transform: translate(0, 60px);
   }
 }
+
+/* end animation codes */
+
+/* responsive codes */
+
 @media screen and (width: 1700px) {
   .grid__gallery {
     -ms-grid-columns: 1fr 1.5em 1fr 1.5em 1fr 1.5em 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 1700px) {
   .grid__gallery {
     -ms-grid-columns: 1fr 1.5em 1fr 1.5em 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 1020px) {
   .grid__gallery {
     -ms-grid-columns: 1fr 1.5em 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 760px) {
   .random__picsum {
     width: 150px;
     height: 150px;
   }
 }
+
 @media screen and (max-width: 760px) {
   .grid__gallery {
     top: 50px;
@@ -480,3 +504,5 @@ footer i {
     bottom: 80px;
   }
 }
+
+/* end the responsive codes */
