@@ -124,6 +124,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  top: 40vh;
   min-height: 250px;
   min-width: 450px;
   border-radius: 25px;
